@@ -1,11 +1,8 @@
 frontend:
-pagina de registro que envia pra url do backend
-pagina que pede pela dados dos dragons e apresenta em forma de lista
+pagina que pede dados dos dragons e apresenta em forma de lista
 
 backend:
-url que recebe dados da pagina de registro
-método que envia dados pro banco de dados
-url que envia todos os dados dos dragons
+controller que recebe dados da pagina de registro
+controller que envia todos os dados dos dragons pra pagina lista
 
 banco de dados:
-mongoDB?
