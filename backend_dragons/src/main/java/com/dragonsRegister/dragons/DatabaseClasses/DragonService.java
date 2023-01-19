@@ -9,8 +9,7 @@ public class DragonService {
     @Autowired
     private DragonRepository dragonRepository;
 
-    public void salvar(String nome, String tipo) {
-        Dragon dragon = new Dragon(nome, tipo);
+    public void salvar(Dragon dragon) {
         this.dragonRepository.save(dragon);
     }
 }
