@@ -25,6 +25,21 @@ form {
   transition: all 0.2s ease-in-out;
 }
 
+#list {
+  background: white;
+  padding: 1.5em;
+  height: fit-content;
+  width: 700px;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
 p {
   font-weight: 500;
   color: #fc466b;
@@ -32,6 +47,27 @@ p {
   font-size: 1.4rem;
   margin-top: 0;
   margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-weight: 500;
+  color: #ff2853;
+  opacity: 0.9;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: 500;
+  color: #fc466b;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 

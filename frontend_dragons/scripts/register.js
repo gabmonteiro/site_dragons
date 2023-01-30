@@ -7,8 +7,8 @@ function sendJson() {
 
     let formJson = JSON.stringify(object);
     console.log(formJson);
-    //enviando form em JSON pro backend por HTTP POST
 
+    //enviando form em JSON pro backend por HTTP POST
     var http = new XMLHttpRequest();
     http.open("POST", "http://localhost:8080/newdragon");
     http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
