@@ -11,11 +11,11 @@
 
   <body>
     <div class="container">
-      <form>
+      <form class="form" name="formulario">
         <p>Registre um Dragon</p>
         <input type="text" placeholder="nome" name="nome" id="nome"/><br />
         <input type="text" placeholder="tipo" name="tipo" id="tipo"/><br />
-        <button onclick="Submit()">Registrar</button>
+        <input type="button" value="Submit" id="button" onclick="sendJson()">
       </form>
     </div>
   </body>

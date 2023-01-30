@@ -2,7 +2,6 @@ frontend:
 pagina que pede dados dos dragons e apresenta em forma de lista
 
 backend:
-controller que recebe dados da pagina de registro
 controller que envia todos os dados dos dragons pra pagina lista
 
 banco de dados:

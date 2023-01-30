@@ -1,19 +1,18 @@
-function Submit() {
-    let nome = document.getElementById("nome");
-    let tipo = document.getElementById("tipo");
-    let dragon = {
-        nome: nome,
-        tipo: tipo
-    };
+function sendJson() {
+    //transformando form em JSON
+    let nome = document.getElementById("nome").value;
+    let tipo = document.getElementById("tipo").value;
+    
+    object = {nome, tipo}
 
-    fetch('http://localhost:8080/newdragon', {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({dragon})
-    })
+    let formJson = JSON.stringify(object);
+    console.log(formJson);
+    //enviando form em JSON pro backend por HTTP POST
 
-    console.log(dragon);
+    var http = new XMLHttpRequest();
+    http.open("POST", "http://localhost:8080/newdragon");
+    http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+    http.send(formJson);
+
+    alert("Enviado");
 }

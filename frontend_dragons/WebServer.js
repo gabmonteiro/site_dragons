@@ -1,5 +1,4 @@
 const express = require("express");
-const axios = require('axios').default;
 const app = express();
 
 app.listen(4040, () => {
