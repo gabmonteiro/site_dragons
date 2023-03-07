@@ -6,7 +6,7 @@
   }
 ,
   "scripts": {
-    "build": "tsc && node WebServer.js"
+    "build": "node WebServer.js"
   }
 }
 
