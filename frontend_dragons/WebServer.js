@@ -8,10 +8,12 @@ app.listen(4040, () => {
 //paginas html
 app.get("/register", (req, res) => {
   res.sendFile(__dirname + "/pages/register.html");
+  console.log("Carregando página...");
 });
 
 app.get("/list", (req, res) => {
   res.sendFile(__dirname + "/pages/list.html");
+  console.log("Carregando página...");
 });
 
 //stylesheets
