@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.listen(4040, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Aplicação iniciada e ouvindo na porta 4040 :)");
 });
 
@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 });
 
 //paginas html
-app.get("/register", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/pages/register.html");
   console.log("Carregando página...");
 });
