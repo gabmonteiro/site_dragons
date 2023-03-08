@@ -8,7 +8,7 @@ app.get("/", function (req, res) {
 })
 
 
-/*
+
 
 //paginas html
 app.get("/register", (req, res) => {
@@ -34,5 +34,3 @@ app.get("/scripts/register.js", (req, res) => {
 app.get("/scripts/list.js", (req, res) => {
   res.sendFile(__dirname + "/scripts/list.js");
 });
-
-*/
