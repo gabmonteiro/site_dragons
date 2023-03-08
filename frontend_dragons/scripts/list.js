@@ -10,7 +10,11 @@ function getDragons() {
             let list = http.responseText;
             console.log(list);
         };
+    formatList(list);
+    //insert tag on html   
+}
 
-    //insert tag on html
-    
+function formatList(jsonNotString) {
+    var stringJson = JSON.parse("\'"+jsonNotString+"\'");
+    console.log(stringJson);
 }
