@@ -5,6 +5,13 @@ app.listen(4040, () => {
   console.log("Aplicação iniciada e ouvindo na porta 4040 :)");
 });
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+    app.use(cors());
+    next();
+});
+
 //paginas html
 app.get("/register", (req, res) => {
   res.sendFile(__dirname + "/pages/register.html");
