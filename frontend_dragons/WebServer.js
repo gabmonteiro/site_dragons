@@ -3,16 +3,12 @@ const app = express();
 
 app.listen(process.env.PORT || 3000);
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-    app.use(cors());
-    next();
-});
-
 app.get("/", function (req, res) {
   res.send("Hellooo");
 })
+
+
+/*
 
 //paginas html
 app.get("/register", (req, res) => {
@@ -38,3 +34,5 @@ app.get("/scripts/register.js", (req, res) => {
 app.get("/scripts/list.js", (req, res) => {
   res.sendFile(__dirname + "/scripts/list.js");
 });
+
+*/
