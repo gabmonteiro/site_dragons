@@ -1,9 +1,0 @@
-frontend:
-formatar lista com os dados
-
-backend:
-fazer metodo Update
-fazer metodo Delete
-fazer variavel de ambiente com senha do banco de dados
-
-banco de dados:
