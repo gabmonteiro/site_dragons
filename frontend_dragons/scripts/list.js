@@ -5,9 +5,9 @@ function getDragons() {
       console.log(listaJson);
       let lista = "";
       listaJson.forEach((element) => {
-        lista += `<p>Nome: ${element.nome} Tipo: ${element.tipo}</p>`;
+        lista += `<p><strong>Nome:</strong> ${element.nome} <strong>Tipo:</strong> ${element.tipo}</p>`;
       });
-      document.querySelector("#list").innerHTML += lista;
+      document.querySelector("#info").innerHTML += lista;
     }
   );
 }

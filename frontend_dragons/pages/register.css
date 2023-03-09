@@ -29,7 +29,6 @@ form {
   background: white;
   padding: 1.5em;
   height: fit-content;
-  width: 700px;
   border-radius: 20px;
   border-left: 1px solid white;
   border-top: 1px solid white;
@@ -40,7 +39,21 @@ form {
   transition: all 0.2s ease-in-out;
 }
 
+#info {
+  text-align: left;
+}
+
 p {
+  font-weight: 300;
+  color: #ff446a;
+  opacity: 0.7;
+  font-size: 1.0rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
   font-weight: 700;
   color: #ff2e58;
   opacity: 0.7;
@@ -48,17 +61,6 @@ p {
   margin-top: 0;
   margin-bottom: 60px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  font-weight: 500;
-  color: #ff2853;
-  opacity: 0.9;
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
 }
 
 h3 {
