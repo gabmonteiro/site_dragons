@@ -10,7 +10,7 @@ function getDragons() {
             let list = http.responseText;
             console.log(list);
             let lista = "";
-            lista.array.forEach(element => {
+            lista.forEach(element => {
                 lista += `<p>Nome: ${element.nome} Tipo: ${element.tipo}</p>`
             });
             document.querySelector("#list").innerHTML += lista;
@@ -23,5 +23,3 @@ function formatList(jsonNotString) {
     var stringJson = JSON.parse("\'"+jsonNotString+"\'");
     console.log(stringJson);
 }
-
-let
