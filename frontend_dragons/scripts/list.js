@@ -3,11 +3,16 @@ function getDragons() {
     async function (response) {
       var listaJson = await response.json();
       console.log(listaJson);
-      let lista = "";
+      let nomes = "";
+      let tipos = "";
+      let contagem=0;
       listaJson.forEach((element) => {
-        lista += `<p><strong>Nome:</strong> ${element.nome} <strong>Tipo:</strong> ${element.tipo}</p>`;
+        nomes += `<p><strong>${contagem+1} Nome:</strong> ${element.nome}</p>`;
+        tipos += `<p><strong>${contagem+1} Tipo:</strong> ${element.tipo}</p>`;
+        contagem++;
       });
-      document.querySelector("#info").innerHTML += lista;
+      document.querySelector("#info").innerHTML += tipos;
+      document.querySelector("#info2").innerHTML += nomes;
     }
   );
 }

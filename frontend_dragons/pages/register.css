@@ -37,13 +37,16 @@ form {
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
+}
+
+#informacoes {
   display: flex;
-  flex-wrap: wrap-reverse;
   flex-direction: row-reverse;
 }
 
 #info, #info2 {
   text-align: left;
+  width: 50%;
 }
 
 p {
