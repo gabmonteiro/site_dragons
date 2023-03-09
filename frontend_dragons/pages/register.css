@@ -37,9 +37,12 @@ form {
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
 }
 
-#info {
+#info, #info2 {
   text-align: left;
 }
 
