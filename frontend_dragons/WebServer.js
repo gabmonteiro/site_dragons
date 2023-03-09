@@ -1,7 +1,12 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 
 app.listen(process.env.PORT || 4040);
+
+app.use(cors({
+    origin: 'https://www.section.io'
+}));
 
 app.get("/", function (req, res) {
   res.send("Hellooo");
