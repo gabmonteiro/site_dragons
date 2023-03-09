@@ -14,7 +14,7 @@ body {
 form {
   background: white;
   padding: 3em;
-  height: 320px;
+  height: max-content;
   border-radius: 20px;
   border-left: 1px solid white;
   border-top: 1px solid white;
@@ -25,7 +25,14 @@ form {
   transition: all 0.2s ease-in-out;
 }
 
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #list {
+  width: 100%;
   background: white;
   padding: 1.5em;
   height: fit-content;
@@ -42,6 +49,7 @@ form {
 #informacoes {
   display: flex;
   flex-direction: row-reverse;
+  margin-bottom: 60px;
 }
 
 #info, #info2 {
@@ -104,6 +112,7 @@ input {
 #button {
   font-size: large;
   margin-top: 10px;
+  margin-bottom: 10px;
   border: 0;
   background-color: white;
   font-family: Montserrat, sans-serif;

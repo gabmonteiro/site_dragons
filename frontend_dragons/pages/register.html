@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="index.css" rel="stylesheet" />
@@ -13,9 +13,22 @@
     <div class="container">
       <form class="form" name="formulario">
         <h1>Registre um Dragon</h1>
-        <input type="text" placeholder="nome" name="nome" id="nome"/><br />
-        <input type="text" placeholder="tipo" name="tipo" id="tipo"/><br />
-        <input type="button" value="Submit" id="button" onclick="sendJson()">
+        <input type="text" placeholder="nome" name="nome" id="nome" /><br />
+        <input type="text" placeholder="tipo" name="tipo" id="tipo" /><br />
+        <div id="buttons">
+          <input
+            type="button"
+            value="Enviar"
+            id="button"
+            onclick="sendJson()"
+          />
+          <input
+            type="button"
+            value="Listar"
+            id="button"
+            onclick="window.location.href = '/list'"
+          />
+        </div>
       </form>
     </div>
   </body>
