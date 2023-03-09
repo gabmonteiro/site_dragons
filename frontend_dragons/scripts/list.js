@@ -7,19 +7,12 @@ function getDragons() {
     http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
     http.send(null);
     http.onreadystatechange = () => {
-            let list = http.responseText;
-            console.log(list);
+            let response = http.response;
+            console.table(response);
             let lista = "";
-            lista.forEach(element => {
+            response.forEach(element => {
                 lista += `<p>Nome: ${element.nome} Tipo: ${element.tipo}</p>`
             });
             document.querySelector("#list").innerHTML += lista;
         };
-    formatList(list);
-    //insert tag on html   
-}
-
-function formatList(jsonNotString) {
-    var stringJson = JSON.parse("\'"+jsonNotString+"\'");
-    console.log(stringJson);
 }
