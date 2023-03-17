@@ -17,9 +17,8 @@ public class DragonService {
         this.dragonRepository.save(dragon);
     }
 
-    public void deletar(Dragon dragon) {
-        String idtoDelete = dragon.getId();
-        dragonRepository.deleteById(idtoDelete);
+    public void deletar(String id) {
+        this.dragonRepository.deleteById(id);
     }
 
     public List<Dragon> getDragons() {

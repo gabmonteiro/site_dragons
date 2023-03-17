@@ -35,8 +35,8 @@ public class DragonController {
     }
 
     @PostMapping(path="/deletedragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody HttpStatus deletarDragon(@RequestBody Dragon dragon) {
-        dragonService.deletar(dragon);
+    public @ResponseBody HttpStatus deletarDragon(@RequestBody String id) {
+        dragonService.deletar(id);
         return HttpStatus.OK;
     }
 }
