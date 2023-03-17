@@ -33,4 +33,10 @@ public class DragonController {
         List<Dragon> dragons = dragonService.getDragons();
         return new ResponseEntity<>(dragons, HttpStatus.OK);
     }
+
+    @PostMapping(path="/deletedragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody HttpStatus deletarDragon(@RequestBody Dragon dragon) {
+        dragonService.deletar(dragon);
+        return HttpStatus.OK;
+    }
 }

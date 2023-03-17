@@ -17,6 +17,11 @@ public class DragonService {
         this.dragonRepository.save(dragon);
     }
 
+    public void deletar(Dragon dragon) {
+        String idtoDelete = dragon.getId();
+        dragonRepository.deleteById(idtoDelete);
+    }
+
     public List<Dragon> getDragons() {
         List<Dragon> dragons = new ArrayList<>();
         dragonRepository.findAll().forEach(dragons::add);

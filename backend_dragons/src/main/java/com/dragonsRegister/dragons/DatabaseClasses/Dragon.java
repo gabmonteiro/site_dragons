@@ -19,6 +19,10 @@ public class Dragon {
         this.tipo = tipo;
     }
 
+    public Dragon(String id) {
+        this.id = id;
+    }
+
     public Dragon() {
 
     }
