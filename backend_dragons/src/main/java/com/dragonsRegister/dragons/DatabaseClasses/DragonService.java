@@ -27,9 +27,9 @@ public class DragonService {
         int idNovo = 0;
         boolean livreOuNao=false;
         while(livreOuNao=false) {
-            if(dragonRepository.existsById(String.valueOf(idNovo))) {
+            if(dragonRepository.existsById(String.valueOf(idNovo)) == true) {
                 idNovo++;
-            } else {
+            } else if(dragonRepository.existsById(String.valueOf(idNovo)) == false) {
                 livreOuNao=true;
             }
         }
