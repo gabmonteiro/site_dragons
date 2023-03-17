@@ -1,6 +1,7 @@
 package com.dragonsRegister.dragons.DatabaseClasses;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,5 +21,18 @@ public class DragonService {
         List<Dragon> dragons = new ArrayList<>();
         dragonRepository.findAll().forEach(dragons::add);
         return dragons;
+    }
+
+    public int checarId() {
+        int idNovo = 0;
+        boolean livreOuNao=false;
+        while(livreOuNao=false) {
+            if(dragonRepository.existsById(String.valueOf(idNovo))) {
+               livreOuNao=true;
+            } else {
+                idNovo++;
+            }
+        }
+        return idNovo;
     }
 }

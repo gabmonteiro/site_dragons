@@ -3,6 +3,7 @@ package com.dragonsRegister.dragons.Controllers;
 import com.dragonsRegister.dragons.DatabaseClasses.Dragon;
 import com.dragonsRegister.dragons.DatabaseClasses.DragonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.Id;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,8 @@ public class DragonController {
 
     @PostMapping(path="/newdragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String RegistrarDragon(@RequestBody Dragon dragon) {
+        int id = dragonService.checarId();
+        dragon.setId(id);
         dragonService.salvar(dragon);
         return "Registro Concluído";
     }

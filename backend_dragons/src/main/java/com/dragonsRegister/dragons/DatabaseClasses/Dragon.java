@@ -34,4 +34,9 @@ public class Dragon {
     public String getTipo() {
         return tipo;
     }
+
+    public void setId(int idNovo) {
+        this.id = String.valueOf(idNovo);
+    }
+
 }
