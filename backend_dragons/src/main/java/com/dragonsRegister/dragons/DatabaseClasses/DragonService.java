@@ -26,10 +26,10 @@ public class DragonService {
     public int checarId() {
         int idNovo = 0;
         boolean livreOuNao=false;
-        while(livreOuNao=false) {
-            if(dragonRepository.existsById(String.valueOf(idNovo)) == true) {
+        while(livreOuNao==false) {
+            if(dragonRepository.existsById(String.valueOf(idNovo))==true) {
                 idNovo++;
-            } else if(dragonRepository.existsById(String.valueOf(idNovo)) == false) {
+            } else {
                 livreOuNao=true;
             }
         }
