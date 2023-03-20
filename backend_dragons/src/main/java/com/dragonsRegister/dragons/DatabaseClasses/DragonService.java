@@ -2,10 +2,12 @@ package com.dragonsRegister.dragons.DatabaseClasses;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
+import org.springframework.stereotype.Indexed;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DragonService {
@@ -39,5 +41,17 @@ public class DragonService {
             }
         }
         return idNovo;
+    }
+
+    public Dragon checaEAtualizaNomeETipoSeNecessario(Dragon dragon) {
+        Dragon dragonBanco = new Dragon();
+        dragonBanco = dragonRepository.findById(dragon.getId()).get();
+        if(dragon.getNome()==null) {
+            dragon.setNome(dragonBanco.getNome());
+        }
+        if(dragon.getTipo()==null) {
+            dragon.setTipo(dragonBanco.getTipo());
+        }
+        return dragon;
     }
 }

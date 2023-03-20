@@ -21,11 +21,11 @@ public class DragonController {
     private DragonService dragonService;
 
     @PostMapping(path="/newdragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody String RegistrarDragon(@RequestBody Dragon dragon) {
+    public @ResponseBody HttpStatus RegistrarDragon(@RequestBody Dragon dragon) {
         int id = dragonService.checarId();
         dragon.setId(id);
         dragonService.salvar(dragon);
-        return "Registro Concluído";
+        return HttpStatus.OK;
     }
 
     @GetMapping("/receivedragon")
@@ -37,6 +37,13 @@ public class DragonController {
     @PostMapping(path="/deletedragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody HttpStatus deletarDragon(@RequestBody Dragon dragon) {
         dragonService.deletar(dragon);
+        return HttpStatus.OK;
+    }
+
+    @PostMapping(path="/updatedragon", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody HttpStatus atualizarDragon(@RequestBody Dragon dragon) {
+        dragon = dragonService.checaEAtualizaNomeETipoSeNecessario(dragon);
+        dragonService.salvar(dragon);
         return HttpStatus.OK;
     }
 }
