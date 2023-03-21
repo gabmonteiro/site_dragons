@@ -19,15 +19,18 @@ public class DragonService {
         this.dragonRepository.save(dragon);
     }
 
-    public void deletar(Dragon dragon) {
-        String id = dragon.getId();
+    public void deletar(String id) {
         this.dragonRepository.deleteById(id);
     }
 
-    public List<Dragon> getDragons() {
+    public List<Dragon> getAllDragons() {
         List<Dragon> dragons = new ArrayList<>();
         dragonRepository.findAll().forEach(dragons::add);
         return dragons;
+    }
+
+    public Dragon getDragon(String id) {
+        return dragonRepository.findById(id).get();
     }
 
     public int checarId() {
