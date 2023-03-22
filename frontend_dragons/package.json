@@ -6,7 +6,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node WebServer.js",
+    "start": "nodemon WebServer.js",
     "build": "npm install"
   }
 }

@@ -53,11 +53,4 @@ public class DragonController {
         dragonService.salvar(dragon);
         return HttpStatus.OK;
     }
-
-//    @PostMapping(path="/dragon/update", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public @ResponseBody HttpStatus atualizarDragon(@RequestBody Dragon dragon) {
-//        dragon = dragonService.checaEAtualizaNomeETipoSeNecessario(dragon);
-//        dragonService.salvar(dragon);
-//        return HttpStatus.OK;
-//    }
 }

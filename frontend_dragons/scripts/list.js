@@ -1,5 +1,5 @@
 function getDragons() {
-  fetch("https://api-dragons-production.up.railway.app/receivedragon").then(
+  fetch("https://api-dragons-production.up.railway.app/dragons").then(
     async function (response) {
       var listaJson = await response.json();
       console.log(listaJson);
@@ -7,8 +7,8 @@ function getDragons() {
       let tipos = "";
       let contagem=0;
       listaJson.forEach((element) => {
-        nomes += `<p><strong>${contagem+1} Nome:</strong> ${element.nome}</p>`;
-        tipos += `<p><strong>${contagem+1} Tipo:</strong> ${element.tipo}</p>`;
+        nomes += `<p><strong>${element.id} Nome:</strong> ${element.nome}</p>`;
+        tipos += `<p><strong>${element.id} Tipo:</strong> ${element.tipo}</p>`;
         contagem++;
       });
       document.querySelector("#info").innerHTML += tipos;
