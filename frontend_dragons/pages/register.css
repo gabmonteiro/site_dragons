@@ -60,9 +60,31 @@ form {
   justify-content: center;
 }
 
-#info {
-  text-align: left;
-  width: max-content;
+#tabela {
+  width: 100%;
+}
+
+td {
+  font-weight: 300;
+  color: #ff446a;
+  opacity: 0.7;
+  font-size: 1.0rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+td input {
+  width: 35px;
+  padding: 0;
+  margin: 10px;
+  border: 1px solid #ff446a;
+  background-color: white;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #ff2e58;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
 }
 
 p {
@@ -86,12 +108,11 @@ h1 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 700;
   color: #fc466b;
   opacity: 0.7;
-  font-size: 1.4rem;
-  margin-top: 0;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -140,9 +161,27 @@ input {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+#deleteButton:hover {
+  font-size: 0.9rem;
+  background-color: rgb(250, 250, 250);
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #ff2e58;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 #button:active {
   font-size: 1.2rem;
   margin-top: 9px;
+  background-color: #ff2e58;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: rgb(250, 250, 250);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#deleteButton:active {
+  font-size: 1rem;
   background-color: #ff2e58;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
