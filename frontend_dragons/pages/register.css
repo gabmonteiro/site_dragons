@@ -54,14 +54,15 @@ form {
 }
 
 #informacoes {
-  display: flex;
-  flex-direction: row-reverse;
   margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#info, #info2 {
+#info {
   text-align: left;
-  width: 50%;
+  width: max-content;
 }
 
 p {
