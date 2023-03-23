@@ -4,15 +4,12 @@ function getDragons() {
       var listaJson = await response.json();
       console.log(listaJson);
       let nomes = "";
-      let tipos = "";
       let contagem=0;
       listaJson.forEach((element) => {
-        nomes += `<p><strong>${element.id} Nome:</strong> ${element.nome}</p>`;
-        tipos += `<p><strong>${element.id} Tipo:</strong> ${element.tipo}</p>`;
+        nomes += `<p><strong>${element.id} Nome:</strong> ${element.nome} <br> <strong>Tipo:</strong> ${element.tipo}</p>`;
         contagem++;
       });
-      document.querySelector("#info").innerHTML += tipos;
-      document.querySelector("#info2").innerHTML += nomes;
+      document.querySelector("#info").innerHTML += nomes;
     }
   );
 }
