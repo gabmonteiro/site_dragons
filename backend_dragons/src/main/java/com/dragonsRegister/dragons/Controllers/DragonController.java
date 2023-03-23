@@ -40,6 +40,7 @@ public class DragonController {
 
     @DeleteMapping(path="/dragons/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public HttpStatus deletarDragon(@PathVariable String id) {
         dragonService.deletar(id);
         return HttpStatus.OK;

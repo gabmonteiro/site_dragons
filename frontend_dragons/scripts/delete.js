@@ -4,6 +4,6 @@ function sendId() {
 
     //enviando form em JSON pro backend por HTTP POST
     fetch("https://api-dragons-production.up.railway.app/dragons/0", {
-        method: 'DELETE', mode: 'no-cors'})
+        method: 'DELETE'})
         .then(alert("deletado"))
 }
