@@ -1,5 +1,3 @@
-const { json } = require("express");
-
 const urlParams = new URLSearchParams(window.location.search);
 let id = urlParams.get("id");
 console.log(id);
@@ -9,18 +7,14 @@ function sendUpJson() {
   let nome = document.getElementById("nome").value;
   let tipo = document.getElementById("tipo").value;
 
-  object = { nome, tipo, id };
+  object = { nome, tipo};
 
-  JSON.stringify(formJson);
+  formJson = JSON.stringify(object);
   console.log(formJson);
 
-  fetch(url, {
-    method: "PUT",
-    body: formJson,
-  })
-    .then((response) => console.log(response))
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
+  var http = new XMLHttpRequest();
+  http.open("PUT", `https://api-dragons-production.up.railway.app/dragons/${id}`);
+  http.send(formJson);
 
   alert("Enviado");
 }
