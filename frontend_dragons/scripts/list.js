@@ -16,7 +16,7 @@ function getDragons() {
       let nomes = "";
       let contagem=0;
       listaJson.forEach((element) => {
-        nomes += `<tr><td>${element.id}</td><td>${element.nome}</td><td>${element.tipo}</td><td><input type="button" value="Del" id="deleteButton" onclick="sendIdToDelete(${element.id})"></input></td></tr>`;
+        nomes += `<tr><td>${element.id}</td><td>${element.nome}</td><td>${element.tipo}</td><td><input type="button" value="Del" id="deleteButton" onclick="sendIdToDelete(${element.id})"></input></td><td><input type="button" value="At" id="deleteButton" onclick="redirectToUpdate(${element.id})"></input></td></tr>`;
         contagem++;
       });
       document.querySelector("#tabela").innerHTML += nomes;
@@ -34,6 +34,10 @@ function sendIdToDelete(id) {
         alert("deletado"),
         window.location.reload(true)
       )
+}
+
+function redirectToUpdate(id) {
+  window.location.replace(`/update?id=${id}`)
 }
 
 

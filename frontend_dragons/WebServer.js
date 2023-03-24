@@ -31,6 +31,11 @@ app.get("/delete", (req, res) => {
   console.log("Carregando página delete");
 });
 
+app.get("/update", (req, res) => {
+  res.sendFile(__dirname + "/pages/update.html");
+  console.log("Carregando página update");
+});
+
 //stylesheets
 app.get("/index.css", (req, res) => {
   res.sendFile(__dirname + "/pages/register.css");
@@ -47,4 +52,8 @@ app.get("/scripts/list.js", (req, res) => {
 
 app.get("/scripts/delete.js", (req, res) => {
   res.sendFile(__dirname + "/scripts/delete.js");
+});
+
+app.get("/scripts/update.js", (req, res) => {
+  res.sendFile(__dirname + "/scripts/update.js");
 });

@@ -48,6 +48,7 @@ public class DragonController {
 
     @PutMapping(path="/dragons/{id}", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public HttpStatus atualizarDragon(@PathVariable int id, @RequestBody Dragon dragon) {
         dragon.setId(id);
         dragon = dragonService.checaEAtualizaNomeETipoSeNecessario(dragon);
