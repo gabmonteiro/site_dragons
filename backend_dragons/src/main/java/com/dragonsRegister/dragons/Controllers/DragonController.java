@@ -46,7 +46,7 @@ public class DragonController {
         return HttpStatus.OK;
     }
 
-    @PutMapping(path="/dragons/{id}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path="/dragons/{id}", produces = MediaType.APPLICATION_JSON_VALUE, headers = "Accept=*/*", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @CrossOrigin(origins = "*")
     public HttpStatus atualizarDragon(@PathVariable int id, @RequestBody Dragon dragon) {
