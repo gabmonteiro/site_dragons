@@ -14,6 +14,7 @@ function sendUpJson() {
 
   var http = new XMLHttpRequest();
   http.open("PUT", `https://api-dragons-production.up.railway.app/dragons/${id}`);
+  http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
   http.send(formJson);
 
   alert("Enviado");
