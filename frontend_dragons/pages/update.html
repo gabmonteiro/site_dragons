@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" />
+    <script src="/scripts/update.js"></script>
+    <title>Update Dragon</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="form" name="formulario">
+        <h1>Atualize o Dragon</h1>
+        <input type="text" placeholder="novo nome" name="nome" id="nome" /><br />
+        <input type="text" placeholder="novo tipo" name="tipo" id="tipo" /><br />
+        <div id="buttons">
+          <input
+            type="button"
+            value="Enviar"
+            id="button"
+            onclick="sendUpJson()"
+          />
+          <input
+            type="button"
+            value="Listar"
+            id="button"
+            onclick="window.location.href = '/list'"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

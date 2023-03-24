@@ -1,5 +1,5 @@
 function getDragons() {
-  //fazedno http get e ordenando array de objetos
+  //fazendo http get e ordenando array de objetos
   fetch("https://api-dragons-production.up.railway.app/dragons").then(
     async function (response) {
       var listaJson = await response.json();
