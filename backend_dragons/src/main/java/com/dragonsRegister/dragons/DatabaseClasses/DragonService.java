@@ -49,10 +49,10 @@ public class DragonService {
     public Dragon checaEAtualizaNomeETipoSeNecessario(Dragon dragon) {
         Dragon dragonBanco = new Dragon();
         dragonBanco = dragonRepository.findById(dragon.getId()).get();
-        if(dragon.getNome()==null) {
+        if(dragon.getNome()==null||dragon.getNome()=="") {
             dragon.setNome(dragonBanco.getNome());
         }
-        if(dragon.getTipo()==null) {
+        if(dragon.getTipo()==null||dragon.getTipo()=="") {
             dragon.setTipo(dragonBanco.getTipo());
         }
         return dragon;
