@@ -4,7 +4,7 @@ let id = urlParams.get("id");
 console.log(id);
 
 //Pegando dragon e setando nas tags inputs
-fetch(`https://api-dragons-production.up.railway.app/dragons/${id}`).then(
+fetch(`https://api-r2jzzrtpsq-uc.a.run.app/dragons/${id}`).then(
   async function (response) {
     let dragon = await response.json();
     document.querySelector("#nome").value = dragon.nome;
@@ -25,7 +25,7 @@ function sendUpJson() {
   var http = new XMLHttpRequest();
   http.open(
     "PUT",
-    `https://api-dragons-production.up.railway.app/dragons/${id}`
+    `https://api-r2jzzrtpsq-uc.a.run.app/dragons/${id}`
   );
   http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
   http.send(formJson);

@@ -1,6 +1,6 @@
 function getDragons() {
   //fazendo http get e ordenando array de objetos
-  fetch("https://api-dragons-production.up.railway.app/dragons").then(
+  fetch("https://api-r2jzzrtpsq-uc.a.run.app/dragons").then(
     async function (response) {
       var listaJson = await response.json();
       console.log(listaJson);
@@ -28,7 +28,7 @@ getDragons();
 
 function sendIdToDelete(id) {
   //enviando form em JSON pro backend por HTTP POST
-  fetch("https://api-dragons-production.up.railway.app/dragons/"+id, {
+  fetch("https://api-r2jzzrtpsq-uc.a.run.app/dragons/"+id, {
       method: 'DELETE'})
       .then(
         alert("deletado"),

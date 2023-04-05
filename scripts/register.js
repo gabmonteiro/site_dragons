@@ -10,7 +10,7 @@ function sendJson() {
 
     //enviando form em JSON pro backend por HTTP POST
     var http = new XMLHttpRequest();
-    http.open("POST", "https://api-dragons-production.up.railway.app/dragons");
+    http.open("POST", "https://api-r2jzzrtpsq-uc.a.run.app/dragons");
     http.setRequestHeader("Content-type", "application/json;charset=UTF-8");
     http.send(formJson);
 
